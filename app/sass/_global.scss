@@ -1,0 +1,57 @@
+::placeholder {
+  font-size: 24px;
+  font-family: $font-light;
+  color: $main-grey;
+  transition: text-indent 0.3s ease;
+  text-indent: 30px;
+}
+
+::selection {
+  background-color: $main-lilac;
+  color: $main-white;
+}
+
+body {
+  font-family: $font-regular;
+  background-color: $main-lilac;
+}
+
+input,
+textarea {
+  border: $main-grey 1px solid;
+  outline: none;
+  &:focus:required:invalid {
+    border-color: $main-red;
+  }
+  &:required:valid {
+    border-color: #cee0c7;
+  }
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fa-star {
+  font-size: 24px;
+  color: #c5c5c5;
+}
+
+.checked {
+  color: $main-red;
+}
+
+.title {
+  font-family: $font-bold;
+  font-size: 32px;
+  color: $main-white;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}

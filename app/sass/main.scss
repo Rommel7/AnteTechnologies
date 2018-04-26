@@ -1,0 +1,165 @@
+/* ===== Fonts ===== */
+
+@import 'fonts';
+/* ===== Libraries ===== */
+
+@import 'libs';
+// SCSS Varibles
+$font-regular: 'Helvetica',
+sans-serif;
+$font-light: 'HelveticaLight',
+sans-serif;
+$font-bold: 'HelveticaBold',
+sans-serif;
+$main-lilac: #8985bc;
+$main-white: #fff;
+$main-red: #ea2f4a;
+$main-black: #000;
+$main-grey: #c5c5c5;
+$border-r-5: 5px;
+$border-r-10: 10px;
+/* ===== Global Styles ===== */
+
+@import 'global';
+/* ===== Header Section ===== */
+
+.header {
+  margin: 34px 0px 10px 0px;
+  .brand-logo {
+    background-color: $main-white;
+    min-width: 190px;
+    height: 90px;
+    border-radius: $border-r-10;
+    margin-right: 10px;
+    a {
+      display: inherit;
+      text-align: center;
+      line-height: 90px;
+    }
+    img {
+      width: 118px;
+      height: 75px;
+    }
+  }
+  .input-search {
+    width: 100%;
+    position: relative;
+    input {
+      width: 100%;
+      height: 90px;
+      border-radius: $border-r-10;
+      text-indent: 30px;
+      font-size: 24px;
+      color: $main-lilac;
+      &:focus::-webkit-input-placeholder {
+        text-indent: 1000px;
+        transition: text-indent 0.3s ease;
+      }
+    }
+    .fa-search {
+      position: absolute;
+      top: 33px;
+      right: 30px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ===== Slider Section ===== */
+
+.menu-slider {
+  background-image: url(../img/page-1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  .side-bar {
+    min-width: 190px;
+    background-color: $main-white;
+    border-radius: $border-r-10;
+    margin-right: 10px;
+    .side-bar-ul {
+      list-style: none;
+      padding: 20px 0px 10px 0px;
+      .side-bar-li {
+        display: block;
+        margin: 10px 0px 0px 20px;
+        .fa {
+          width: 40px;
+          height: 40px;
+          font-size: 24px;
+          color: $main-white;
+          line-height: 40px;
+          text-align: center;
+          background-color: $main-red;
+          border-radius: $border-r-5;
+          margin-right: 20px;
+        }
+        a {
+          color: $main-black;
+          line-height: 40px;
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .slider {
+    position: relative;
+    width: 100%;
+    .btn-start {
+      font-family: $font-bold;
+      font-size: 24px;
+      color: #fff;
+      background-color: $main-red;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      padding: 0;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+    }
+    .carousel-item {
+      max-height: 460px;
+      img {
+        max-height: 460px;
+      }
+    }
+    .carusel-link {
+      position: absolute;
+    }
+  }
+}
+
+/* ===== Popular Section ===== */
+
+.popular {
+  margin-top: 100px;
+  .games {
+    margin-bottom: 58px;
+    .games-item {
+      width: 180px;
+      height: 180px;
+      background: transparent;
+      text-align: center;
+      img {
+        border-radius: $border-r-5;
+      }
+      .slogan {
+        font-size: 16px;
+        margin-top: 10px;
+        background: -webkit-linear-gradient( left, $main-white, $main-white, transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+/* ===== Category Section ===== */
+
+/* ===== Footer Section ===== */
+
+/* ===== Media Queries ===== */
+
+@import 'responsive';

@@ -1,0 +1,26 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Gaming",
+  "description": "Ante Technologies, Gaming",
+  "short_name": "Gmng",
+  "icons": [
+    {
+      "src": "img/favicon/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/favicon/apple-touch-icon-400x400.png",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/app",
+  "start_url": "/app/index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "#ea2f4a",
+  "background_color": "#8985bc",
+  "screenshots": [{}]
+}
