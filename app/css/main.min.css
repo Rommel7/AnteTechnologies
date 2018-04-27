@@ -2356,9 +2356,15 @@ textarea {
   -webkit-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom; }
+  background-position: bottom;
+  padding-bottom: 110px; }
 
-/* ===== Header Section ===== */
+.svg {
+  position: absolute; }
+
+/*=============================================
+        =   Header Begin    =
+=============================================*/
 .header {
   margin: 34px 0px 10px 0px; }
   .header .input-search {
@@ -2385,7 +2391,9 @@ textarea {
       font-size: 24px;
       cursor: pointer; }
 
-/* ===== Slider Section ===== */
+/*=============================================
+        =   Slider Section Begin    =
+=============================================*/
 .menu-slider {
   background-image: url(../img/layers/background-layer-179.svg);
   -webkit-background-size: contain;
@@ -2401,6 +2409,7 @@ textarea {
             border-radius: 10px;
     margin-right: 10px; }
     .menu-slider .side-bar .side-bar-ul {
+      position: relative;
       list-style: none;
       padding: 20px 0px 10px 0px; }
       .menu-slider .side-bar .side-bar-ul .side-bar-li {
@@ -2421,7 +2430,21 @@ textarea {
           color: #000;
           line-height: 40px;
           font-size: 16px;
-          text-decoration: none; }
+          text-decoration: none;
+          padding-bottom: 8px;
+          border-bottom: none;
+          -webkit-transition: 0.3s ease;
+          -o-transition: 0.3s ease;
+          transition: 0.3s ease; }
+          .menu-slider .side-bar .side-bar-ul .side-bar-li a:hover {
+            color: #ea2f4a; }
+      .menu-slider .side-bar .side-bar-ul .svg {
+        position: absolute;
+        top: 40%;
+        right: 90%;
+        z-index: -1; }
+        .menu-slider .side-bar .side-bar-ul .svg svg:first-child {
+          margin-left: 20%; }
   .menu-slider .slider {
     height: 100%;
     margin-left: 10px;
@@ -2460,9 +2483,21 @@ textarea {
       width: 100%;
       height: 100%; }
 
-/* ===== Popular Section ===== */
+/*=============================================
+        =   Popular Section Begin    =
+=============================================*/
 .popular {
-  margin-top: 100px; }
+  margin-top: 100px;
+  position: relative; }
+  .popular .svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1; }
+    .popular .svg svg:first-child {
+      position: absolute;
+      left: 30%;
+      top: -30%; }
 
 .games {
   margin-bottom: 58px;
@@ -2502,13 +2537,53 @@ textarea {
       background: -webkit-linear-gradient(left, #fff, #fff, transparent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
+      .games .games-item .slogan:hover {
+        -webkit-text-fill-color: #000;
+        color: #000; }
 
-/* ===== Category Section ===== */
+/*=============================================
+        =   Category Section Begin    =
+=============================================*/
 .category {
   background-image: url(../img/layers/background-layer-402.svg);
   -webkit-background-size: contain;
           background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
+  .category .svg {
+    position: absolute;
+    left: 0;
+    top: 5%; }
+    .category .svg svg:nth-child(2) {
+      position: absolute;
+      top: -30%;
+      left: 0; }
+  .category .svg-second {
+    position: absolute;
+    top: 0;
+    right: 10%; }
+    .category .svg-second svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 40%; }
+  .category .svg-three {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    z-index: -1; }
+    .category .svg-three svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 30%; }
+  .category .svg-four {
+    position: absolute;
+    left: 10%;
+    bottom: -15%;
+    z-index: -1; }
+    .category .svg-four svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 45%; }
   .category .title h1 {
     font-size: 24px;
     margin-top: 70px; }
@@ -2565,9 +2640,11 @@ textarea {
       background-color: #fff;
       color: #000; }
 
-/* ===== Footer Section ===== */
+/*=============================================
+        =   Footer Begin    =
+=============================================*/
 .footer {
-  margin-top: 227px;
+  margin-top: 110px;
   background-color: #ea2f4a; }
   .footer .row .col {
     padding: 0; }
@@ -2609,6 +2686,43 @@ textarea {
 
 /* ===== Media Queries ===== */
 /* ===== Large Devices, Wide Screens ===== */
+@media only screen and (max-width: 1340px) {
+  .arrows {
+    position: unset;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 30px 0px 0px 0px; }
+    .arrows .swiper-button-prev {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+      margin-right: 30px; }
+    .arrows .swiper-button-next {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+    .arrows .slider-btn {
+      height: 65px;
+      width: 215px;
+      line-height: 65px; }
+      .arrows .slider-btn i {
+        line-height: 65px; } }
+
+/* ===== Large Devices, Wide Screens ===== */
 @media only screen and (max-width: 1199px) {
   .header .col-2 {
     margin: 0 auto;
@@ -2617,6 +2731,26 @@ textarea {
     margin-bottom: 30px; }
   .header .input-search {
     margin-left: 0; }
+  .menu-slider {
+    margin-top: 30px; }
+    .menu-slider .side-bar {
+      margin: 0px; }
+      .menu-slider .side-bar .side-bar-ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+    .menu-slider .slider {
+      margin: 0px; }
+    .menu-slider .svg {
+      visibility: hidden; }
   .footer .brand-logo {
     margin-right: 0; }
     .footer .brand-logo a {

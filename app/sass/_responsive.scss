@@ -1,4 +1,32 @@
 /* ===== Large Devices, Wide Screens ===== */
+@media only screen and (max-width: 1340px) {
+  .arrows {
+    position: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 30px 0px 0px 0px;
+
+    .swiper-button-prev {
+      order: 2;
+      margin-right: 30px;
+    }
+    .swiper-button-next {
+      order: 1;
+    }
+    .slider-btn {
+      height: 65px;
+      width: 215px;
+      line-height: 65px;
+      i {
+        line-height: 65px;
+      }
+    }
+  }
+}
+
+/* ===== Large Devices, Wide Screens ===== */
 @media only screen and (max-width: 1199px) {
   .header {
     .col-2 {
@@ -12,13 +40,31 @@
       margin-left: 0;
     }
   }
+  .menu-slider {
+    margin-top: 30px;
+    .side-bar {
+      margin: 0px;
+      .side-bar-ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+    .slider {
+      margin: 0px;
+    }
+    .svg {
+      visibility: hidden;
+    }
+  }
+
   .footer {
     .brand-logo {
-        margin-right: 0;
-        a{
-            text-align: center;
-        }
+      margin-right: 0;
+      a {
+        text-align: center;
       }
+    }
     .or-1 {
       -webkit-box-ordinal-group: 2;
       -webkit-order: 1;
@@ -41,17 +87,17 @@
 }
 
 /* ===== Medium Devices, Desktops ===== */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
 }
 
 /* ===== Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 }
 
 /* ===== Extra Small Devices, Phones ===== */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
 }
 
 /* ===== Custom, iPhone Retina ===== */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 319px) {
 }

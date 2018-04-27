@@ -19,7 +19,9 @@ $border-r-10: 10px;
 /* ===== Global Styles ===== */
 @import 'global';
 
-/* ===== Header Section ===== */
+/*=============================================
+        =   Header Begin    =
+=============================================*/
 
 .header {
   margin: 34px 0px 10px 0px;
@@ -49,7 +51,9 @@ $border-r-10: 10px;
   }
 }
 
-/* ===== Slider Section ===== */
+/*=============================================
+        =   Slider Section Begin    =
+=============================================*/
 
 .menu-slider {
   background-image: url(../img/layers/background-layer-179.svg);
@@ -65,6 +69,7 @@ $border-r-10: 10px;
     border-radius: $border-r-10;
     margin-right: 10px;
     .side-bar-ul {
+      position: relative;
       list-style: none;
       padding: 20px 0px 10px 0px;
       .side-bar-li {
@@ -86,6 +91,21 @@ $border-r-10: 10px;
           line-height: 40px;
           font-size: 16px;
           text-decoration: none;
+          padding-bottom: 8px;
+          border-bottom: none;
+          transition: 0.3s ease;
+          &:hover {
+            color: $main-red;
+          }
+        }
+      }
+      .svg {
+        position: absolute;
+        top: 40%;
+        right: 90%;
+        z-index: -1;
+        svg:first-child {
+          margin-left: 20%;
         }
       }
     }
@@ -130,10 +150,25 @@ $border-r-10: 10px;
   }
 }
 
-/* ===== Popular Section ===== */
+/*=============================================
+        =   Popular Section Begin    =
+=============================================*/
 
 .popular {
   margin-top: 100px;
+  position: relative;
+  .svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    svg:first-child {
+      position: absolute;
+      left: 30%;
+      top: -30%;
+    }
+  }
 }
 
 .games {
@@ -175,15 +210,65 @@ $border-r-10: 10px;
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &:hover {
+        -webkit-text-fill-color: $main-black;
+        color: $main-black;
+      }
     }
   }
 }
-/* ===== Category Section ===== */
+
+/*=============================================
+        =   Category Section Begin    =
+=============================================*/
 
 .category {
   background-image: url(../img/layers/background-layer-402.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  position: relative;
+  .svg {
+    position: absolute;
+    left: 0;
+    top: 5%;
+    svg:nth-child(2) {
+      position: absolute;
+      top: -30%;
+      left: 0;
+    }
+  }
+  .svg-second {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 40%;
+    }
+  }
+  .svg-three {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    z-index: -1;
+    svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 30%;
+    }
+  }
+  .svg-four {
+    position: absolute;
+    left: 10%;
+    bottom: -15%;
+    z-index: -1;
+    svg:first-child {
+      position: absolute;
+      top: -30%;
+      left: 45%;
+    }
+  }
   .title {
     h1 {
       font-size: 24px;
@@ -236,10 +321,12 @@ $border-r-10: 10px;
   }
 }
 
-/* ===== Footer Section ===== */
+/*=============================================
+        =   Footer Begin    =
+=============================================*/
 
 .footer {
-  margin-top: 227px;
+  margin-top: 110px;
   background-color: $main-red;
   .row {
     .col {
