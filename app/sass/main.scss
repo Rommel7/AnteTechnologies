@@ -1,16 +1,13 @@
 /* ===== Fonts ===== */
-
 @import 'fonts';
-/* ===== Libraries ===== */
 
+/* ===== Libraries ===== */
 @import 'libs';
+
 // SCSS Varibles
-$font-regular: 'Helvetica',
-sans-serif;
-$font-light: 'HelveticaLight',
-sans-serif;
-$font-bold: 'HelveticaBold',
-sans-serif;
+$font-regular: 'Helvetica', sans-serif;
+$font-light: 'HelveticaLight', sans-serif;
+$font-bold: 'HelveticaBold', sans-serif;
 $main-lilac: #8985bc;
 $main-white: #fff;
 $main-red: #ea2f4a;
@@ -18,32 +15,18 @@ $main-black: #000;
 $main-grey: #c5c5c5;
 $border-r-5: 5px;
 $border-r-10: 10px;
-/* ===== Global Styles ===== */
 
+/* ===== Global Styles ===== */
 @import 'global';
+
 /* ===== Header Section ===== */
 
 .header {
   margin: 34px 0px 10px 0px;
-  .brand-logo {
-    background-color: $main-white;
-    min-width: 190px;
-    height: 90px;
-    border-radius: $border-r-10;
-    margin-right: 10px;
-    a {
-      display: inherit;
-      text-align: center;
-      line-height: 90px;
-    }
-    img {
-      width: 118px;
-      height: 75px;
-    }
-  }
   .input-search {
     width: 100%;
     position: relative;
+    margin-left: 10px;
     input {
       width: 100%;
       height: 90px;
@@ -69,11 +52,15 @@ $border-r-10: 10px;
 /* ===== Slider Section ===== */
 
 .menu-slider {
-  background-image: url(../img/page-1.svg);
+  background-image: url(../img/layers/background-layer-179.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  .row {
+    position: relative;
+  }
   .side-bar {
     min-width: 190px;
+    height: 100%;
     background-color: $main-white;
     border-radius: $border-r-10;
     margin-right: 10px;
@@ -82,7 +69,7 @@ $border-r-10: 10px;
       padding: 20px 0px 10px 0px;
       .side-bar-li {
         display: block;
-        margin: 10px 0px 0px 20px;
+        margin: 15px 0px 0px 20px;
         .fa {
           width: 40px;
           height: 40px;
@@ -104,8 +91,17 @@ $border-r-10: 10px;
     }
   }
   .slider {
-    position: relative;
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: $main-lilac;
     width: 100%;
+    position: relative;
+    .stars {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
     .btn-start {
       font-family: $font-bold;
       font-size: 24px;
@@ -118,15 +114,18 @@ $border-r-10: 10px;
       border: 0;
       outline: none;
       cursor: pointer;
-    }
-    .carousel-item {
-      max-height: 460px;
-      img {
-        max-height: 460px;
+      position: absolute;
+      bottom: 50px;
+      left: 45%;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: $main-white;
+        color: $main-black;
       }
     }
-    .carusel-link {
-      position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -135,30 +134,159 @@ $border-r-10: 10px;
 
 .popular {
   margin-top: 100px;
-  .games {
-    margin-bottom: 58px;
-    .games-item {
-      width: 180px;
-      height: 180px;
-      background: transparent;
-      text-align: center;
-      img {
-        border-radius: $border-r-5;
+}
+
+.games {
+  margin-bottom: 58px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .games-item:nth-child(5) {
+    margin-right: 0;
+  }
+  .games-item:nth-child(10) {
+    margin-right: 0;
+  }
+  .games-item:nth-child(15) {
+    margin-right: 0;
+  }
+  .games-item:last-child {
+    margin-right: 0;
+  }
+  .games-item {
+    width: 180px;
+    height: 180px;
+    background: transparent;
+    text-align: center;
+    margin: 0px 30px 60px 0px;
+    cursor: pointer;
+    img {
+      border-radius: $border-r-5;
+    }
+    .slogan {
+      font-size: 16px;
+      margin-top: 10px;
+      background: -webkit-linear-gradient(
+        left,
+        $main-white,
+        $main-white,
+        transparent
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+/* ===== Category Section ===== */
+
+.category {
+  background-image: url(../img/layers/background-layer-402.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  .title {
+    h1 {
+      font-size: 24px;
+      margin-top: 70px;
+    }
+  }
+  .cat-buttons {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .cat-btn {
+      background-color: $main-white;
+      color: $main-black;
+      border-radius: $border-r-5;
+      height: 40px;
+      font-size: 18px;
+      line-height: 40px;
+      margin: 0px 5px;
+      padding: 0px 15px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: $main-red;
+        color: $main-white;
       }
-      .slogan {
-        font-size: 16px;
-        margin-top: 10px;
-        background: -webkit-linear-gradient( left, $main-white, $main-white, transparent);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    }
+  }
+
+  .btn-all {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: $main-white;
+    background-color: $main-red;
+    height: 72px;
+    line-height: 72px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: $border-r-10;
+    &:hover {
+      background-color: $main-white;
+      color: $main-black;
     }
   }
 }
 
-/* ===== Category Section ===== */
-
 /* ===== Footer Section ===== */
+
+.footer {
+  margin-top: 227px;
+  background-color: $main-red;
+  .row {
+    .col {
+      padding: 0;
+    }
+    .col-2:nth-child(1) {
+      background-color: $main-white;
+    }
+  }
+  .brand-logo {
+    border-radius: unset;
+    margin-right: 0;
+    padding-right: 20px;
+    a {
+      text-align: right;
+    }
+  }
+  .pages {
+    text-align: center;
+    .pages-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline-flex;
+      li {
+        margin: 0px 15px;
+        a {
+          color: $main-white;
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 90px;
+          padding-bottom: 6px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+        }
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    color: $main-white;
+    font-size: 16px;
+    line-height: 90px;
+    p {
+      margin: 0;
+    }
+  }
+}
 
 /* ===== Media Queries ===== */
 
