@@ -29,8 +29,8 @@ gulp.task('styles', () => {
     gulp
       .src('app/sass/**/*.scss')
       .pipe(sass({ outputStyle: 'expand' }).on('error', notify.onError()))
-      //.pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
-      //.pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
+      .pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
+      .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
       .pipe(autoprefixer(['last 10 versions']))
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(gulp.dest('app/css'))

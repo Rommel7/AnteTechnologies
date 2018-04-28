@@ -34,7 +34,6 @@
   .svg-fourth {
     opacity: 0.4;
   }
-
   /* header section */
   .header {
     .col-lg-3 {
@@ -53,7 +52,6 @@
       margin-left: 0;
     }
   }
-
   /* menu-silder section */
   .menu-slider {
     margin-top: 30px;
@@ -87,7 +85,6 @@
       margin-right: 30px;
     }
   }
-
   /* category section */
   .category {
     .svg-second {
@@ -106,7 +103,6 @@
       bottom: -15%;
     }
   }
-
   /* footer section */
   .footer {
     .brand-logo {
@@ -183,12 +179,10 @@
   .svg-fourth {
     display: none;
   }
-
   .games {
     display: flex;
     justify-content: space-around;
   }
-
   .menu-slider {
     .slider {
       .btn-start {
@@ -233,7 +227,6 @@
       min-width: unset;
       border-radius: unset;
     }
-
     .input-search {
       input {
         height: 60px;
@@ -282,5 +275,4 @@
 }
 
 /* ===== Custom, iPhone Retina ===== */
-@media only screen and (max-width: 319px) {
-}
+@media only screen and (max-width: 319px) {}
