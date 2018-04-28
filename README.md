@@ -1,4 +1,4 @@
 ## Ante Technologies - Gaming 🎮
 
 - Task - One Page Template
-- Preview - https://rommel7.github.io/AnteTechnologies/
+- **<a href="https://rommel7.github.io">Preview in github.io</a>**
